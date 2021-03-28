@@ -1,4 +1,5 @@
 # MUSERVER.CLUB GUIA DE INSTALAÇÃO:
+<a href="https://www.youtube.com/watch?v=n9zFiUaXv_M">Video Link </a>
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/n9zFiUaXv_M/0.jpg)](https://www.youtube.com/watch?v=n9zFiUaXv_M)
 </br>
 # MUSERVER.CLUB INSTALLATION GUIDE:
