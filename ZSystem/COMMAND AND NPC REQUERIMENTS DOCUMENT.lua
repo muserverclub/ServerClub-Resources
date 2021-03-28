@@ -24,9 +24,18 @@ Command.ReqRuud = { 0, 0, 0, 0 }                                                
 Command.ReqWCoinC = { 0, 0, 0, 0 }                                                                    -- Requerimento de WCoinC ( para cada nível vip )
 Command.ReqWCoinP = { 0, 0, 0, 0 }                                                                    -- Requerimento de WCoinP ( para cada nível vip )
 Command.ReqGoblinPoint = { 0, 0, 0, 0 }                                                               -- Requerimento de GoblinPoint ( para cada nível vip )
+
+--[[
+  ReqItem = { Amount, Index, Level},
+
+  Amount --> Item Amount / Quantidade de item
+  Index --> Section*512+Id
+  Level --> Item min level required (-1 to ignore)
+]]
+
 Command.ReqItem = {
   {
-    {1,0,-1}
+    {1,0,-1} 
   },
   {
     {1,0,-1}
@@ -37,6 +46,27 @@ Command.ReqItem = {
     {1,0,-1}
   }
 }
+
+--[[
+  ReqItemEx = { Section = 0, ID = 0}, 
+  Section --> Item section
+  ID --> Item Id
+
+  *** OPTIONAL ***
+  MinLevel --> Item Min Level
+  MaxLevel --> Item Max Level
+  Skill -- > Check Skill (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  Luck --> Check Luck (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  MinOption --> Min Item Option
+  MaxOption --> Max Item Option
+  ExcType -- > Excelent Type (-1 ignore, 0 can´t have, othter value = EXC OPTION NUMBER)
+  MinExc --> Min Exc
+  MaxExc --> Max Exc
+  SetOption --> Set Item Option (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  JoHOption --> Jewel of Harmony (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  Option380 --> 380 Option (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  
+]]
 Command.ReqItemEx = {
   {
     {Section = 0, ID = 0}
