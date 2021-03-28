@@ -12,3 +12,14 @@ SQLConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
 SQLAsyncConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
 Season = 6 -- SEASON NUMBER
 require("ZSystem\\App") -- ZSystem
+
+--auto require
+for dir in io.popen([[dir "../Data/Script/" /b]]):lines() do
+	if string.find(dir, "%.") == nil and string.find(dir,'Ignore') == nil and dir ~= 'ZSystem' then
+		local f=io.open(string.format("../Data/Script/%s/App.lua",dir),"r")
+		if f~= nil then
+			io.close(f)
+			require(string.format("%s\\App", dir))
+		end
+	end
+end
