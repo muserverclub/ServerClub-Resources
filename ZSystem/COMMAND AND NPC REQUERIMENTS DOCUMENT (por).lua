@@ -10,6 +10,10 @@ Command.AllowQuest = {0,1,2,3}                                                  
 Command.AllowGens = {0,1,2}                                                                           -- Famílias Gens permitidas
 Command.AllowPKLevel = {0,1,2,3,4,5,6,7}                                                              -- Níveis de Status PK/Hero que podem usar o comando
 
+--[[
+	Todas as configurações a seguir são por vip!
+	Command.Config = { free, vip1,vip2,vip3}
+]]
 Command.CountDown = { 20, 20, 20, 20 }                                                                -- Tempo de delay em segundos para usar novamente esse comando ( para cada nível vip )
 Command.DayTimes = { 1, 1, 1, 1 }                                                                     -- Número de vezes que pode usar o comando diariamente com sucesso ( para cada nível vip )
 Command.AllowLevel = { {0,400}, {0,400}, {0,400}, {0,400} }                                           -- Minimo/Máximo Level para usar o comando ( para cada nível vip )
@@ -28,22 +32,27 @@ Command.ReqGoblinPoint = { 0, 0, 0, 0 }                                         
 --[[
   ReqItem = { Amount, Index, Level},
 
-  Amount --> Item Amount / Quantidade de item
+  Amount --> Quantidade de item
   Index --> Section*512+Id
-  Level --> Item min level required (-1 to ignore)
+  Level --> Item min level requirido (-1 to ignore)
 ]]
 
 Command.ReqItem = {
+	-- FREE
   {
-    {1,0,-1} 
+    {1,0,-1} ,
   },
+	-- VIP 1
   {
-    {1,0,-1}
+    {1,0,-1},
   },
+	-- VIP 2
   {
-    {1,0,-1}
-  },{
-    {1,0,-1}
+    {1,0,-1},
+  },
+	-- VIP 3
+  {
+    {1,0,-1},
   }
 }
 
@@ -52,31 +61,35 @@ Command.ReqItem = {
   Section --> Item section
   ID --> Item Id
 
-  *** OPTIONAL ***
+  *** OPCIONAL ***
   MinLevel --> Item Min Level
   MaxLevel --> Item Max Level
-  Skill -- > Check Skill (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
-  Luck --> Check Luck (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  Skill -- > Check Skill  (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  Luck --> Check Luck  (-1 ignorar, 0 não pode ter, 1 precisa ter)
   MinOption --> Min Item Option
   MaxOption --> Max Item Option
-  ExcType -- > Excelent Type (-1 ignore, 0 can´t have, othter value = EXC OPTION NUMBER)
+  ExcType -- > Excelent Type (-1 ignora, 0 não pode, outro valor = soma dos EXC OPTION )
   MinExc --> Min Exc
   MaxExc --> Max Exc
-  SetOption --> Set Item Option (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
-  JoHOption --> Jewel of Harmony (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
-  Option380 --> 380 Option (-1 ignore, 0 can´t have, 1 must have) (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  SetOption --> Set Item Option  (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  JoHOption --> Jewel of Harmony  (-1 ignorar, 0 não pode ter, 1 precisa ter)
+  Option380 --> 380 Option  (-1 ignorar, 0 não pode ter, 1 precisa ter)
   
 ]]
 Command.ReqItemEx = {
+	-- FREE
   {
     {Section = 0, ID = 0}
   },
+	-- VIP 1
   {
     {Section = 0, ID = 0}
   },
+	-- VIP 2
   {
     {Section = 0, ID = 0}
   },
+	-- VIP 3
   {
     {Section = 0, ID = 0}
   }
@@ -84,11 +97,12 @@ Command.ReqItemEx = {
 Command.QueryCharacter = {
   {
     {
-      "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
-      "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'",
-      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
+      "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'", -- VERIFICA
+      "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'", -- EXECUTA 
+      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"} -- AVISA CASO VERIFICAÇÃO FALHE
     }
   },
+  
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
@@ -96,6 +110,7 @@ Command.QueryCharacter = {
       {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
     }
   },
+  
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
@@ -103,6 +118,7 @@ Command.QueryCharacter = {
       {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
     }
   },
+  
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
