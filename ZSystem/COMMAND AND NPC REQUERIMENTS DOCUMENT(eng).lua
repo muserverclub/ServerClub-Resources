@@ -1,8 +1,20 @@
 Command.Authority = {"Admin1","Admin2","Admin3"}                                                      -- Enter the name of the characters that will be able to use this command (other characters that you have not entered here, will not be able to use)
 Command.BlockMaps = {0,1,2}                                                                           -- Map numbers on which the script does not work (If nothing is inserted here, any map will work on the command)
 Command.AllowMaps = {}                                                                                -- Map numbers on which the command works (If nothing is inserted here, any map will work on the command)
+Command.BlockCoord = {0,1,2}                                                                          -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
+Command.AllowCoord = {}                                                                               -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
 Command.BlockDays = {}                                                                                -- Days of the week that the script will not work (1 = Sunday, 7 = Saturday)
 Command.BlockHours = {}                                                                               -- Hours of the day that the script will not work (0 to 23 hours)
+
+Command.CustomFunction = function(aIndex,Data)                                                        -- Função que será executada para fazer verificações extra
+
+  --aIndex = Index of the main player to be checked
+  --Data = returns NPC Index if working with OnNpcTalk, or an array with the command code in position 1 and the command arguments in position 2, if using OnCommandManager
+
+  --return 1          -- The verification was successful
+  --return 0          -- The check was in error, and the function will not proceed
+
+end
 
 Command.AllowAccountLevel = {0,1,2,3}                                                                 -- Account levels you can use the command
 Command.AllowClass = {0,1,2,3,4,5,6,7,8}                                                              -- Classes that can use the command
