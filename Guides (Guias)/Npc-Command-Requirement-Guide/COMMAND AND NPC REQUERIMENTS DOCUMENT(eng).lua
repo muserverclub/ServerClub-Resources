@@ -1,7 +1,23 @@
 Command.Authority = {"Admin1","Admin2","Admin3"}                                                      -- Enter the name of the characters that will be able to use this command (other characters that you have not entered here, will not be able to use)
 Command.BlockMaps = {0,1,2}                                                                           -- Map numbers on which the script does not work (If nothing is inserted here, any map will work on the command)
-Command.AllowMaps = {}                                                                                -- Map numbers on which the command works (If nothing is inserted here, any map will work on the command)
-Command.BlockCoord = {0,1,2}                                                                          -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
+Command.AllowMaps = {
+	{
+		Map = 0,
+		MapXMin = 0,
+		MapYMin = 0,
+		MapXMax = 255,
+		MapYMax = 255
+	}
+}                                                                                -- Map numbers on which the command works (If nothing is inserted here, any map will work on the command)
+Command.BlockCoord = {
+	{
+		Map = 0,
+		MapXMin = 0,
+		MapYMin = 0,
+		MapXMax = 255,
+		MapYMax = 255
+	}
+}                                                                          -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
 Command.AllowCoord = {}                                                                               -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
 Command.BlockDays = {}                                                                                -- Days of the week that the script will not work (1 = Sunday, 7 = Saturday)
 Command.BlockHours = {}                                                                               -- Hours of the day that the script will not work (0 to 23 hours)
