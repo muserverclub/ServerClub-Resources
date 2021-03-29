@@ -120,6 +120,26 @@ Strings = function (aIndex,id)
         'Você não pode usar este comando em um local seguro.',
         'No puede usar este comando desde un lugar seguro.'
       },
+      Controller_25 = {
+        "You cannot use this command on this coordinate.",
+        "Você não pode usar este comando neste coordenada.",
+        "No puede usar este comando en esta area."
+      },
+      Controller_26 = {
+        "You cannot use this command on this coordinate.",
+        "Você não pode usar este comando neste coordenada.",
+        "No puede usar este comando en esta area."
+      },
+      RealTime_1 = {
+        "Código inválido!",
+        "Código inválido!",
+        "Código inválido!"
+      },
+      RealTime_2 = {
+        "Código atualizado!",
+        "Código atualizado!",
+        "Código atualizado!"
+      }
 
   }
   
