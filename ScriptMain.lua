@@ -11,6 +11,7 @@
 SQLConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
 SQLAsyncConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
 Season = 6 -- SEASON NUMBER
+CacheLogDirectory = "C:/ScriptLogs/"
 require("ZSystem\\App") -- ZSystem
 
 --auto require
