@@ -27,3 +27,189 @@ CREATE TABLE [dbo].[Greed_Reward]
     [createdata] smalldatetime NOT NULL DEFAULT (getdate()) ,
     [receiveddata] smalldatetime NULL
 )
+
+GO
+
+ALTER TABLE MEMB_INFO ADD [hwid] varchar(100) NULL
+
+GO
+
+CREATE TABLE [dbo].[CharacterRealTime] (
+[AccountId] varchar(10) NOT NULL ,
+[Name] varchar(10) NOT NULL ,
+[Serial] varchar(100) NULL ,
+[IpAddress] varchar(15) NULL ,
+[Online] bit NOT NULL DEFAULT ((0)) ,
+[ServerName] varchar(100) NULL ,
+[PKLevel] int NOT NULL DEFAULT ((0)) ,
+[Level] int NOT NULL DEFAULT ((0)) ,
+[MasterLevel] int NOT NULL DEFAULT ((0)) ,
+[Reset] int NOT NULL DEFAULT ((0)) ,
+[MasterReset] int NOT NULL DEFAULT ((0)) ,
+[Life] int NOT NULL DEFAULT ((0)) ,
+[MaxLife] int NOT NULL DEFAULT ((0)) ,
+[Shield] int NOT NULL DEFAULT ((0)) ,
+[MaxShield] int NOT NULL DEFAULT ((0)) ,
+[Map] int NOT NULL DEFAULT ((0)) ,
+[MapX] int NOT NULL DEFAULT ((0)) ,
+[MapY] int NOT NULL DEFAULT ((0)) ,
+[Party] varchar(100),
+[Death] int NOT NULL DEFAULT ((0)) ,
+[Killer] varchar(100) NULL ,
+[DeathMap] int NOT NULL DEFAULT ((0)) ,
+[DeathMapX] int NOT NULL DEFAULT ((0)) ,
+[DeathMapY] int NOT NULL DEFAULT ((0)) ,
+[Attack] int NOT NULL DEFAULT ((0)) ,
+[Attacker] varchar(100) NULL ,
+[AttackMap] int NOT NULL DEFAULT ((0)) ,
+[AttackMapX] int NOT NULL DEFAULT ((0)) ,
+[AttackMapY] int NOT NULL DEFAULT ((0)) 
+)
+
+
+GO
+
+CREATE Procedure [dbo].[G_CharacterRealTime] 
+@AccountId varchar(10) ,
+@Name varchar(10) ,
+@Serial varchar(100) ,
+@IpAddress varchar(15) ,
+@Online bit ,
+@ServerName varchar(100) ,
+@PKLevel int ,
+@Level int ,
+@MasterLevel int ,
+@Reset int ,
+@MasterReset int ,
+@Life int ,
+@MaxLife int ,
+@Shield int ,
+@MaxShield int ,
+@Map int ,
+@MapX int ,
+@MapY int ,
+@Party varchar(100)
+AS
+BEGIN
+
+SET NOCOUNT ON
+SET XACT_ABORT ON
+
+IF NOT EXISTS (SELECT 1 FROM CharacterRealTime WHERE Name=@Name)
+BEGIN
+
+	INSERT INTO [dbo].[CharacterRealTime]
+           ([AccountId] 
+		   ,[Name]
+           ,[Serial]
+           ,[IpAddress]
+           ,[Online]
+           ,[ServerName]
+           ,[PKLevel]
+           ,[Level]
+           ,[MasterLevel]
+           ,[Reset]
+           ,[MasterReset]
+           ,[Life]
+           ,[MaxLife]
+           ,[Shield]
+           ,[MaxShield]
+           ,[Map]
+           ,[MapX]
+           ,[MapY]
+           ,[Party])
+     VALUES
+           (@AccountId,
+			@Name,
+			@Serial,
+            @IpAddress,
+			@Online,
+			@ServerName,
+			@PKLevel,
+			@Level,
+			@MasterLevel,
+			@Reset,
+			@MasterReset,
+			@Life,
+			@MaxLife,
+			@Shield,
+			@MaxShield,
+			@Map,
+			@MapX,
+			@MapY,
+            @Party)
+
+END
+ELSE
+BEGIN
+
+	UPDATE [dbo].[CharacterRealTime]
+        SET [AccountId] = @AccountId
+            ,[Name] = @Name
+            ,[Serial] = @Serial
+            ,[IpAddress] = @IpAddress
+            ,[Online] = @Online
+            ,[ServerName] = @ServerName
+            ,[PKLevel] = @PKLevel
+            ,[Level] = @Level
+            ,[MasterLevel] = @MasterLevel
+            ,[Reset] = @Reset
+            ,[MasterReset] = @MasterReset
+            ,[Life] = @Life
+            ,[MaxLife] = @MaxLife
+            ,[Shield] = @Shield
+            ,[MaxShield] = @MaxShield
+            ,[Map] = @Map
+            ,[MapX] = @MapX
+            ,[MapY] = @MapY
+            ,[Party] = @Party
+        WHERE [Name] = @Name
+
+END
+
+SET NOCOUNT OFF
+SET XACT_ABORT OFF
+
+END
+
+GO
+
+CREATE TABLE [dbo].[Greed_DashRanking](
+	[Name] [varchar](10) NOT NULL,
+	[Kills] [int] NOT NULL default(0),
+	[Death] [int] NOT NULL default(0),
+	[Timer] [int] NOT NULL default(0),
+	[Type] [varchar](10) NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE Procedure [dbo].[G_DashRanking] 
+@Name varchar(10),
+@Kills int,
+@Death int,
+@Timer int,
+@Type varchar(10)
+AS
+BEGIN
+
+SET NOCOUNT ON
+SET XACT_ABORT ON
+
+IF NOT EXISTS (SELECT 1 FROM Greed_DashRanking WHERE Name=@Name and [Type]=@Type)
+BEGIN
+
+	INSERT INTO Greed_DashRanking (Name,Kills,Death,Timer,[Type]) VALUES (@Name,@Kills,@Death,@Timer,@Type)
+
+END
+ELSE
+BEGIN
+
+	UPDATE Greed_DashRanking SET Kills=Kills+@Kills, Death=Death+@Death, Timer=@Timer WHERE Name=@Name and [Type]=@Type
+
+END
+
+SET NOCOUNT OFF
+SET XACT_ABORT OFF
+
+END
