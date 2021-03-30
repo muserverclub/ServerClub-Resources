@@ -34,6 +34,7 @@ ALTER TABLE MEMB_INFO ADD [hwid] varchar(100) NULL
 
 GO
 
+Drop Table CharacterRealTime
 CREATE TABLE [dbo].[CharacterRealTime] (
 [AccountId] varchar(10) NOT NULL ,
 [Name] varchar(10) NOT NULL ,
@@ -54,6 +55,13 @@ CREATE TABLE [dbo].[CharacterRealTime] (
 [MapX] int NOT NULL DEFAULT ((0)) ,
 [MapY] int NOT NULL DEFAULT ((0)) ,
 [Party] varchar(100),
+[Strength] [int] NOT NULL DEFAULT (0),
+[Dexterity] [int] NOT NULL DEFAULT (0),
+[Vitality] [int] NOT NULL DEFAULT (0),
+[Energy] [int] NOT NULL DEFAULT (0),
+[Leadership] [int] NOT NULL DEFAULT (0),
+[Ruud] [int] NOT NULL DEFAULT (0),
+[Money] [int] NOT NULL DEFAULT (0),
 [Death] int NOT NULL DEFAULT ((0)) ,
 [Killer] varchar(100) NULL ,
 [DeathMap] int NOT NULL DEFAULT ((0)) ,
@@ -63,10 +71,11 @@ CREATE TABLE [dbo].[CharacterRealTime] (
 [Attacker] varchar(100) NULL ,
 [AttackMap] int NOT NULL DEFAULT ((0)) ,
 [AttackMapX] int NOT NULL DEFAULT ((0)) ,
-[AttackMapY] int NOT NULL DEFAULT ((0)) 
+[AttackMapY] int NOT NULL DEFAULT ((0)),
+[Class] [int] NOT NULL DEFAULT (0), 
 )
 
-
+DROP Procedure [dbo].[G_CharacterRealTime] 
 GO
 
 CREATE Procedure [dbo].[G_CharacterRealTime] 
@@ -88,7 +97,15 @@ CREATE Procedure [dbo].[G_CharacterRealTime]
 @Map int ,
 @MapX int ,
 @MapY int ,
-@Party varchar(100)
+@Party varchar(100),
+@Strength int, 
+@Dexterity int, 
+@Vitality int, 
+@Energy int, 
+@Leadership int, 
+@Ruud int, 
+@Money int,
+@Class int 
 AS
 BEGIN
 
@@ -117,7 +134,15 @@ BEGIN
            ,[Map]
            ,[MapX]
            ,[MapY]
-           ,[Party])
+           ,[Party]
+		   ,[Strength] 
+			,[Dexterity] 
+			,[Vitality] 
+			,[Energy] 
+			,[Leadership] 
+			,[Ruud] 
+			,[Money]
+			,[Class] )
      VALUES
            (@AccountId,
 			@Name,
@@ -137,7 +162,15 @@ BEGIN
 			@Map,
 			@MapX,
 			@MapY,
-            @Party)
+            @Party,
+			@Strength,
+			@Dexterity,
+			@Vitality,
+			@Energy,
+			@Leadership,
+			@Ruud,
+			@Money,
+			@Class)
 
 END
 ELSE
@@ -163,6 +196,14 @@ BEGIN
             ,[MapX] = @MapX
             ,[MapY] = @MapY
             ,[Party] = @Party
+			,[Strength] = @Strength
+			,[Dexterity] = @Dexterity
+			,[Vitality] = @Vitality
+			,[Energy] = @Energy
+			,[Leadership] = @Leadership
+			,[Ruud] = @Ruud
+			,[Money] = @Money
+			,[Class] = @Class
         WHERE [Name] = @Name
 
 END
