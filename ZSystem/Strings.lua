@@ -1,1 +1,190 @@
-local O=string.byte;local G=string.char;local c=string.sub;local C=table.concat;local a=table.insert;local B=math.ldexp;local I=getfenv or function()return _ENV end;local l=setmetatable;local t=select;local l=unpack or table.unpack;local M=tonumber;local function f(A)local e,o,a="","",{}local d=256;local n={}for l=0,d-1 do n[l]=G(l)end;local l=1;local function O()local e=M(c(A,l,l),36)l=l+1;local o=M(c(A,l,l+e-1),36)l=l+e;return o end;e=G(O())a[1]=e;while l<#A do local l=O()if n[l]then o=n[l]else o=e..c(e,1,1)end;n[d]=e..c(o,1,1)a[#a+1],e,d=o,o,d+1 end;return table.concat(a)end;local M=f('21H21I27521G21D27521I22T21U21W22N22G22921X21G1K27923922H22J22J22F22G22A27L22G27C22H22I22I22B21W27B27D27F21X23721W21W22H21W23E22B21S22B22I21J27927925I1921F27921G21G28F2792101527928E27521021327927428T28Q27628F1I28R29327522228K21M27K22H27T28627W27Y22X1721G23827923322H21V21W1M22F22D22D29L27T1H21X29O29Q22B21X29V21U22721Y22B1M22A22H29Y1M22G22H21U29O27W22H21T1M22729L1M21U22H1M21V21X2A421U22M22N29V29R27N27P22A1O21G23427923D2AK22N21Y2AM22A2A429P29Y21X2B722F1M21X21V2BE29R27T2BE22G26T2452AM2A321W22J22N21U2A421Z21V2A421S22H22D26T24C2AN2AP1M29Y2BU1M2AV2AX22H2AZ1927923722I2B42B62A52B929X2BC2CK2BF21V2C92BX2BK2A92AM27X1M2BQ2BS2C82AO22F29N2C72A42CA27Q2CC21G29827527S27U29D21W22X1421G29227529K2CQ22D27P2C42AQ22M2D527M27O27Q29O22922F27E29O2AC1J21X2AZ1S27922O2C02C22CX22H2B82C42D21M2AM2D62A62CU21S22F22J22B27T2A422B22J1M2E22AZ1H27922U2BX2EC2D12D32CH2EH2AM22G2BX2EK2EM2EO2C622G2ES2E32D929929B27V27X2DF1521G23729J2AJ22M22F28B2C622622D22B22B2B822A2AK2DR2A921V22J22C27Y2EF2282B42EM29V2AI2DM2DO2AO2DQ2AT2C92DT2AX2A52DY22I2272AZ23I2E62E82C322B2FT2FW22B2CQ2F426T23W2EM2862CO28B2242A82BW2A42B62EZ21X2EE2D42GH2DU2EI22A22N2D22HI2F82BU2AZ23J27923I2BE2GT2FU2HH2EI22I2BI27P21U22N22A22F2FY2EC28B2FU29V2H72CX2EY2A42F02C621X2C82F32A52HI27D2EL2EN2HM2FE2DB29A2DD2FI22X1221G1U2FN2GC22G2AA2AC2GE2FZ2GG2AV2HF2EF2FB2AR2GG27O21Y2AZ1R2GQ2C12C32BM2BO2EA2HA2HC2IE2DS2HF2F42HD2JA22F2AZ2IV27523C2BP2IA2ED2D32JM2HE2CB2FA2ID2C82JR2AZ2DA21I2DC29C2IR1321G1O2IW2C92GD2C52AR2JN2J529A2FZ2A42282FH2AF27E2291M2JA21X1C2KF2JE2E92H92IB2HB29N2EG27M2K32AA29V2AP22921V27E2BU29V2JR2KY21G1P2EW2IA29V2IC28C2K22D72K422I22H2LB22N2LD22N2IL2A82LI2KZ2K92KB2FH29E1021G1M2KH2DN2IY2AB2DP2J22AU2GI2DV2AA21T2JT2L12JG2BN2BP2EB2L42JL2IF2L82LS22F2292872JS27I2792JW2I92GV2LO2L52K52JN2K322F22M2MZ2K82FF2IQ29E1121G1F2KH22J2AO2AC2FP2FR2G421U21T2FV2FB1J2FY2AL2ES2FY27X28B2CH2NY2J12J82MH2AW27Q2AZ132MN2CK2FR2BU2D329B2A42NW2C62NZ2CX2D22BE2LP2K12F31O2AZ1027923622B2G42AK2EN2G52IL21W2OI2FY2272OL22G22N2O22OM21W2OO2N72HD2OR2IN2KA2IP2KC29E1E2NJ2NL2NN1M2NP2A42NR2NT2EN2OL2NY2OJ2P32AP2AC2O42KK2AS2O72HF2AZ29I2752E72JF2OD2AQ2P12OH2OL2P41M2P32B822827E22N26T2412MP2PB2PD2MT2N92D72AZ1A2OV2OX2QD22G2QE27C2QH2P62PY2C722F22C27X2FU29N21Y2ON2JZ2N82LR2A62NE2IO2FG2DE22X1F21G23A2PO2IE2PQ2FQ2PS22B2NS2NU2PW2AM2OJ27O2JM29N2PZ2RW2AK2AM2O52Q42HE2Q621G2HO2Q92GR2QC2OZ2OG2R32QG2OL2QJ22B2QL2P82QO2QQ2G92SK2RD2PC2RF2PF2MV2RI21G23B2QY2OY2BU2R12SJ2P32OL2R52FY2P32QM22D22N2AM27O2C72H22SV2QS2K02MU2JO2AZ21N2NF2PK2DF171621G142IW29N22D2HW29Z2A52A729V2IZ2AD2LU2AG2GB2S72MF2O62SB2AX2AZ28Z27A2BH2C92U12C52JH2BP27Y2CZ2BV2BX1M2BZ2QB2J12SY2TO21G1V27922T2DM2U12A42AA1M2CW2CY2BT2MS2TM2QU2T02TQ2RK2NG2TT29G1E2TY2UK22F2U22O12LQ2A62A82U622F2AE2U92AJ2Q22GF2Q52UF21G1B2V12GW2A926T24B2PA2EC2U02VN2UM2QQ2V92C82I82UU2E92UW2OQ2SZ2D82TX2752V22A92P92VQ2D52V42CU2V72H82UP2VA2SX2WL2UY2VF2PI2RL2IR172DH2VK2DK29L29N2292EN29V2282EL22N2GM2U32VS2ME2VU2U82AH2VX2S82Q32J32MI2AY21G1C2V12UJ2XH22J2W722I2HI1M2XE22G2U52WE2WZ2WG2US2WI2C32WK2TN2CB2UG2XZ1M2Y12XJ2Y52EC2Y72U52CV2WY2BR2X02OP2YH2QV21G2X42M52RM172FK2QX2XB29M1M22U23H1M1P1M23I27Y2YS2W92U42CU2AC2XO2AF2XQ2CQ2VY2MG2UE2O929H2W42CQ2BM2W82WT2Z82ZA2ZC2ZE21W26T23P22N2W62JI2WF2UR2BY2SG2YG2VD2D82OU27522Q2ZV2WS2CH2EC2Z92ZB2ZD2ZF2WW2C831092X12YX2VE2TR2M62TT2IT162MB2DO29A2XK2S92XU2O82FY2282862ER2BE2HB2282H82HW2FU2AZ122OC21X31042JJ2VB2RG2IG2EQ2AN2ER2LU2DN2CH2LC29M2D82UH22T27V2JX2GV310U310E2CK21X2EZ2FB22I21V2DX29N311Y2862TP310X2Z22KE1G2KH2R12FW2OL22P27L27E2392UB2S92KM2W12LL2SF2QB21Y2P32TE2HB2CO2OJ312R22H312T2QR2RF2L72UY2JU21I23C22B2I62BT2BE3137312S22G312U2TK2SX2F22WM312I2VG2TS29F2M82EV2Z629O2T82VT2VV312P2ZP2UD2J42AX21G311131302E92UN2OZ2ER2V929Z2WE2RE2OP2C52F32N12JV2AM2C52V82YB311P2UX2CB2YZ312J2X72NI2T23140312O2NX2AM2OY2PT2RY2S22OF2WX2PA2OJ2GJ2OJ31462G031482ZS2GP314C2C33132313I2AT2HR2IE2EE2V62P22A42TG2VN315A2VP2CH2OJ2QH313Q2IC313D2YI21G2392N2313I29Y313K29V2R72T72EP2CH31592G5315Z2T92OL31632PE313S2X3314Y29E172PM312M31522FV2FY313M313922G22U312V2Q3312X2ZS312Z21I2QA2L23133315P31362FY313827E3172316N2EE31652YY313F313H313J21U313L317E313N317H314K316O2RH2D82Z02PJ310Y29F2RO1T312N316X2OL23522H2R9317G31702Q12XS2DQ31752XW311K315L2CX317B31352EC2OJ318731893171318B313B3164317W2JC3169317O317Q1M318O2Y4318Q2LF318S317V2PG317Y2X629E142TV1J3184312P2OJ2E22FC3173318E2ZR2XW2KG318I315N31342BE318M316Y29V319G317I2L6318U21G313Z313G316A21X313K2OL319G319U317U2HC316P316631972VH2DG29G215319D319S319I2KP319K2MM319N318K319Q2OI29V319V2EF319X1N318W316B317P319H31AR2LQ3196316R2DF142DH1L31AG2OL2302PV315G318F2AZ1Q2OC319O317C319R1M31B92FB31AR317K2T0319C2JV31A131A32OJ31BK319431A8319X31AB313W142FK2DJ21I2DL2A931852OJ22S21V21V31542UC315H2XV318V31AM315O318L2QH31C831CA31BV319W2PG316V31A0318X2OL31CK2FY31AZ31A92YY31BY3180142IT317731C42MC2ZJ31CC31172J5311A27M29O2BF22F311F2CX311H22B2OA2OC314E2L33126317W2C62ER2G22V72C02VU2BF22B2LD312H21G172N231242JK2VC31DN2B831292IB312B312D2EE312G317X31B22DG2KE31D22AJ2MC2U631162W02DV2KO314722H2872HH22G22F2IM2UH31792MO31082MR31DM2IG2R12WL31EQ2EN2I22N0317M31E1314U2X22K32PV2R7314122B2N031CY2RM142M821O27922S31FG22I22Q22N2EM29F21G21027K31042HH2MY1M27E21S26T2472Y42A61N21G31FM27531FO2VU31FR31FT2DH21131FX23P31FZ2AM31ET2BH2Y42242I222H31G821Q31FN22B21T2D222A31FU31C223J2BU22J316D22G21S2HI2EI313Q314Q2W531G22IL31G427D22H21G31GT31GB31GV31GX2DG21G31BP21I319G2KR31062EN31H631GQ313B31HA2CQ31HC27T31HE2TF31HH31GU31GW21W31GY2FK21P279319G2V227N29A2FW2PH31IB2G222J29A31GQ31I331HJ31I531GY2IT31FW275237311F2BT2S029V31332OX2I031HG31HI21I31FO31IO22X2KE1X2OC31IY2G42CQ316Z312T31IM31J331HK31I622X2M831J8318I31JA2W531JD317131JF31J431HL2NI21631J9316A31JB31863188319122U318B31JR31JH31GY2PM28F314X2752352RW23D22C22K313I21U23E27P22928S28F28H25Z28F31GT28M27521B28F27428X21I31IR21E21I31KR31KX27528J31KW31IR21C21I31KZ28N27431L728E2121D31L021I28E28X2V031KV28O27531KZ31L728T31L321I27831LQ21I31L731J228W31LV31LH21I31LE31LG31L427531LK21I31L531LN21I31GA31L221I28J31I931LU31L72K931LY31LC31M131LF28M21R31M731M531MP31M831L821I21K31LM31MD21I21L31MW31L721228N31MP31MK31M228M2TQ31LJ31MR31MW31KZ31IR31MC28J31GH31MG21I1Y31N331LB31M031N621I28V31N931LL31LU31KZ1W31MW28J31JL31MC31L721A31NK31LZ31LD31MM21I1Z31MP21I31M631MS31KZ21831NV21I21931N021I31JV31LA31O231ML31LG31KT31NQ31O731MC31KZ21431OD31AF31NH2MA31OJ31N531O421731O731O931NB21I27J31LU28J31B631NH31C231MJ31NM31O431AU31OO31OA21I31CP31IR28J319Z31L621I313F31PB31O331LG319C31PF31P32E531P621I318331NH31BE31OX31PC31LG31M631O831NA31NS21I319M31NE21I317731PM314B31KU31OK31NN2JD31PT31Q72WO31QA2UH31PM318H31QF31OY31LG31DZ31QJ31OQ21I310G31QA1131OG2XA31QQ31Q228M2OB31QU31KY21I2XY31PW31LF31NH2Z531R231PQ28M2NK31R631M91831OD2CE31NH2RQ31Q131RF21I2W331RI31MT2Q831QA316831NH23631O131QR28M2T231RT31KZ2B131PW23531OG315K31RE31OL28M2FM31S421I23G31OD23H31OG23E31S031R321I2HO31SF23C31OD23D31OG22U31SM31RQ23F31P131Q631QV22S31OD22T31OG22Q31SW31SC21I22V31SZ31NR31QV22O31OD22P31OG23231T731NN22R31TB31OP31R723031OD23131OG22Y31TJ31O423331TM31PG22W31OD22X31OG22E31TU31LG22Z31TX31P322C31OD22D31OG22A31U428M22F31U731Q731U931PW31UB31NH31UD31RP31T822B31UH31QV22931OD31UT31NH31UV31SB31NN22831UR31R722N31OD31V331NH31V531UY31O422M31V131M922L31OD31VD31NH31VF31V831LG22K31VB31MT22J31OD31VN31NH31VP31VI28M22I31VL31KZ22H31OD21Y31OG31VX31UO31NN22G31VV21I21W31OD31W731NH31W931VS21I21Z31W521U31OD31WG31NH31WI31WC21X31W521S31OD31WO31NH31WQ31WC21V31W522631OD31WW31NH31WY31WC21T31W522431OD31X431NH31X631WC22731O72OU27428M28E31R722531N328J31N331MT28M28M31OW31KZ31KZ29631LY27431L927531XD31XK31M031N328M');local n=bit and bit.bxor or function(l,e)local o,n=1,0 while l>0 and e>0 do local a,c=l%2,e%2 if a~=c then n=n+o end l,e,o=(l-a)/2,(e-c)/2,o*2 end if l<e then l=e end while l>0 do local e=l%2 if e>0 then n=n+o end l,o=(l-e)/2,o*2 end return n end local function o(o,l,e)if e then local l=(o/2^(l-1))%2^((e-1)-(l-1)+1);return l-l%1;else local l=2^(l-1);return(o%(l+l)>=l)and 1 or 0;end;end;local l=1;local function e()local e,c,o,a=O(M,l,l+3);e=n(e,54)c=n(c,54)o=n(o,54)a=n(a,54)l=l+4;return(a*16777216)+(o*65536)+(c*256)+e;end;local function A()local e=n(O(M,l,l),54);l=l+1;return e;end;local function d()local e,o=O(M,l,l+2);e=n(e,54)o=n(o,54)l=l+2;return(o*256)+e;end;local function f()local n=e();local l=e();local c=1;local n=(o(l,1,20)*(2^32))+n;local e=o(l,21,31);local l=((-1)^o(l,32));if(e==0)then if(n==0)then return l*0;else e=1;c=0;end;elseif(e==2047)then return(n==0)and(l*(1/0))or(l*(0/0));end;return B(l,e-1023)*(c+(n/(2^52)));end;local B=e;local function F(e)local o;if(not e)then e=B();if(e==0)then return'';end;end;o=c(M,l,l+e-1);l=l+e;local e={}for l=1,#o do e[l]=G(n(O(c(o,l,l)),54))end return C(e);end;local l=e;local function B(...)return{...},t('#',...)end local function O()local t={};local G={};local l={};local M={t,G,nil,l};local l=e()local n={}for o=1,l do local e=A();local l;if(e==3)then l=(A()~=0);elseif(e==1)then l=f();elseif(e==2)then l=F();end;n[o]=l;end;for O=1,e()do local l=A();if(o(l,1,1)==0)then local c=o(l,2,3);local a=o(l,4,6);local l={d(),d(),nil,nil};if(c==0)then l[3]=d();l[4]=d();elseif(c==1)then l[3]=e();elseif(c==2)then l[3]=e()-(2^16)elseif(c==3)then l[3]=e()-(2^16)l[4]=d();end;if(o(a,1,1)==1)then l[2]=n[l[2]]end if(o(a,2,2)==1)then l[3]=n[l[3]]end if(o(a,3,3)==1)then l[4]=n[l[4]]end t[O]=l;end end;for l=1,e()do G[l-1]=O();end;M[3]=A();return M;end;local function A(l,e,d)local e=l[1];local o=l[2];local l=l[3];return function(...)local n=e;local O=o;local c=l;local l=B local e=1;local l=-1;local f={};local M={...};local G=t('#',...)-1;local l={};local o={};for l=0,G do if(l>=c)then f[l-c]=M[l+1];else o[l]=M[l+1];end;end;local l=G-c+1 local l;local c;while true do l=n[e];c=l[1];if c<=30 then if c<=14 then if c<=6 then if c<=2 then if c<=0 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;elseif c==1 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else o[l[2]]=A(O[l[3]],nil,d);end;elseif c<=4 then if c==3 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else do return o[l[2]]end end;elseif c==5 then o[l[2]]=d[l[3]];else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=10 then if c<=8 then if c==7 then o[l[2]]=A(O[l[3]],nil,d);else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>9 then do return o[l[2]]end else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=12 then if c>11 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c==13 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=22 then if c<=18 then if c<=16 then if c>15 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c==17 then o[l[2]]=l[3];else o[l[2]]=o[l[3]]+l[4];end;elseif c<=20 then if c==19 then local e=l[2];local n=o[e];for l=e+1,l[3]do a(n,o[l])end;else o[l[2]][l[3]]=o[l[4]];end;elseif c==21 then o[l[2]]=o[l[3]];else local l=l[2]o[l]=o[l](o[l+1])end;elseif c<=26 then if c<=24 then if c==23 then o[l[2]]=o[l[3]];else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>25 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=28 then if c>27 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>29 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=46 then if c<=38 then if c<=34 then if c<=32 then if c==31 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>33 then local l=l[2]o[l]=o[l](o[l+1])else o[l[2]]=o[l[3]][o[l[4]]];end;elseif c<=36 then if c==35 then o[l[2]]=l[3];else do return end;end;elseif c==37 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=42 then if c<=40 then if c>39 then do return end;else o[l[2]]=d[l[3]];end;elseif c>41 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=44 then if c==43 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>45 then d[l[3]]=o[l[2]];else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=54 then if c<=50 then if c<=48 then if c>47 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c==49 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local e=l[2];local n=o[e];for l=e+1,l[3]do a(n,o[l])end;end;elseif c<=52 then if c==51 then d[l[3]]=o[l[2]];else o[l[2]]={};end;elseif c>53 then local c;o[l[2]]=o[l[3]][o[l[4]]];e=e+1;l=n[e];o[l[2]]=d[l[3]];e=e+1;l=n[e];o[l[2]]=o[l[3]];e=e+1;l=n[e];c=l[2]o[c]=o[c](o[c+1])e=e+1;l=n[e];o[l[2]]=o[l[3]]+l[4];e=e+1;l=n[e];o[l[2]]=o[l[3]][o[l[4]]];e=e+1;l=n[e];do return o[l[2]]end e=e+1;l=n[e];do return end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=58 then if c<=56 then if c==55 then local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c>57 then o[l[2]]=o[l[3]]+l[4];else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;elseif c<=60 then if c==59 then o[l[2]][l[3]]=o[l[4]];else o[l[2]]=o[l[3]][o[l[4]]];end;elseif c>61 then o[l[2]]={};else local d;local c;o[l[2]]={};e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];o[l[2]]=l[3];e=e+1;l=n[e];c=l[2];d=o[c];for l=c+1,l[3]do a(d,o[l])end;end;e=e+1;end;end;end;return A(O(),{},I())();
+Strings = function (aIndex,id)
+  local strings = { 
+      Controller_1 = {
+        "Your account's access type does not allow you to use this command.",
+        "O tipo de acesso da sua conta não permite que você use este comando.",
+        "El tipo de acceso de su cuenta no le permite usar este comando."
+      },
+      Controller_2 = {
+        "You can use the command again at %s.",
+        "Você pode usar o comando novamente em %s.",
+        "Puede usar el comando nuevamente en %s."
+      },
+      Controller_3 = {
+        "You have exceeded the number of times you can use this command daily.",
+        "Você excedeu o número de vezes que pode usar este comando diariamente.",
+        "Ha excedido la cantidad de veces que puede usar este comando diariamente."
+      },
+      Controller_4 = {
+        "You cannot use this command on this map.",
+        "Você não pode usar este comando neste mapa.",
+        "No puede usar este comando en este mapa."
+      },
+      Controller_5 = {
+        "You can use the command on the following maps:",
+        "Você pode usar o comando nos seguintes mapas:",
+        "Puedes usar el comando en los siguientes mapas:"
+      },
+      Controller_6 = {
+        "You cannot use this command now.",
+        "Você não pode usar este comando agora.",
+        "No puedes usar este comando ahora."
+      },
+      Controller_7 = {
+        "You must have between %d to %d level to use this command.",
+        "Você deve ter entre %d e %d para usar este comando..",
+        "Debe tener entre %d y %d nivel para usar este comando."
+      },
+      Controller_8 = {
+        "You must have between %d to %d reset to use this command.",
+        "Você deve ter entre %d e %d redefinição para usar este comando.",
+        "Debe tener entre %d y %d restablecer para usar este comando."
+      },
+      Controller_9 = {
+        "You must have between %d to %d master reset to use this command.",
+        "Você deve ter entre %d e %d redefinição mestre para usar este comando.",
+        "Debe tener entre %d y %d reinicio maestro para usar este comando."
+      },
+      Controller_10 = {
+        "Your class does not allow you to use this command.",
+        "Sua classe não permite que você use este comando.",
+        "Su clase no le permite usar este comando."
+      },
+      Controller_11 = {
+        "Your class level does not allow you to use this command.",
+        "Seu nível de classe não permite que você use este comando.",
+        "Su nivel de clase no le permite usar este comando."
+      },
+      Controller_12 = {
+        "Your gens family does not allow you to use this command.",
+        "Sua família gens não permite que você use este comando.",
+        "Su familia de gens no le permite usar este comando."
+      },
+      Controller_13 = {
+        "Your PK / Hero level does not allow you to use this command.",
+        "Seu nível de PK / Herói não permite que você use este comando.",
+        "Tu nivel de PK / Hero no te permite usar este comando."
+      },
+      Controller_14 = {
+        'You can only use this command from a safe place.',
+        'Você só pode usar este comando em um local seguro.',
+        'Solo puede usar este comando desde un lugar seguro.'
+      },
+      Controller_15 = {
+        "You need %d WCoinC to use the command.",
+        "Você precisa de %d WCoinC para usar o comando.",
+        "Necesita %d WCoinC para usar el comando."
+      },
+      Controller_16 = {
+        "You are not allowed to use this command",
+        "Você não tem permissão para usar esse comando",
+        "No se le permite usar este comando"
+      },
+      Controller_17 = {
+        "You need to be between master level %d and %d to use the command.",
+        "Você precisa estar no entre o master level %d e %d para usar o comando.",
+        "Necesitas estar entre el master level %d y %d para usar el comando."
+      },
+      Controller_18 = {
+        "You need %d WCoinP to use the command.",
+        "Você precisa de %d WCoinP para usar o comando.",
+        "Necesita %d WCoinP para usar el comando."
+      },
+      Controller_19 = {
+        "You need %d GoblinPoint to use the command.",
+        "Você precisa de %d GoblinPoint para usar o comando.",
+        "Necesita %d GoblinPoint para usar el comando."
+      },
+      Controller_20 = {
+        "You need %d %s %s to use the command.",
+        "Você precisa de %d %s %s para usar o comando.",
+        "Necesita %d %s %s para usar el comando."
+      },
+      Controller_21 = {
+        "You need %s to use the command.",
+        "Você precisa de %s para usar o comando.",
+        "Necesita %s para usar el comando."
+      },
+      Controller_22 = {
+        "You need %d Zen to use the command.",
+        "Você precisa de %d Zen para usar o comando.",
+        "Necesita %d Zen para usar el comando."
+      },
+      Controller_23 = {
+        "You need %d Ruud to use the command.",
+        "Você precisa de %d Ruud para usar o comando.",
+        "Necesita %d Ruud para usar el comando."
+      },
+      Controller_24 = {
+        'You can not use this command from a safe place.',
+        'Você não pode usar este comando em um local seguro.',
+        'No puede usar este comando desde un lugar seguro.'
+      },
+      Controller_25 = {
+        "You cannot use this command on this coordinate.",
+        "Você não pode usar este comando neste coordenada.",
+        "No puede usar este comando en esta area."
+      },
+      Controller_26 = {
+        "You cannot use this command on this coordinate.",
+        "Você não pode usar este comando neste coordenada.",
+        "No puede usar este comando en esta area."
+      },
+      RealTime_1 = {
+        "Código inválido!",
+        "Código inválido!",
+        "Código inválido!"
+      },
+      RealTime_2 = {
+        "Código atualizado!",
+        "Código atualizado!",
+        "Código atualizado!"
+      },
+      Reward_1 = {
+        "Items enviado para o seu inventário",
+        "Items enviado para o seu inventário",
+        "Items enviado para o seu inventário",
+      },
+      Reward_2 = {
+        "%s foi enviado para o seu inventário",
+        "%s foi enviado para o seu inventário",
+        "%s foi enviado para o seu inventário",
+      },
+      Reward_3 = {
+        "%s Summoned",
+        "%s Summonado",
+        "%s Summoned",
+      },
+      Reward_4 = {
+        "Efeito %s recebido",
+        "Efeito %s recebido",
+        "Efeito %s recebido",
+      },
+      Reward_5 = {
+        "Você recebeu %d WCoinC",
+        "Você recebeu %d WCoinC",
+        "Você recebeu %d WCoinC",
+      },
+      Reward_6 = {
+        "Você recebeu %d WCoinP",
+        "Você recebeu %d WCoinP",
+        "Você recebeu %d WCoinP",
+      },
+      Reward_7 = {
+        "Você recebeu %d GoblinPoint",
+        "Você recebeu %d GoblinPoint",
+        "Você recebeu %d GoblinPoint",
+      },
+      Reward_8 = {
+        "Libere espaço no seu inventário para receber o item",
+        "Libere espaço no seu inventário para receber o item",
+        "Libere espaço no seu inventário para receber o item",
+      }
+
+  }
+  
+  return strings[id][(GetObjectLang(aIndex)+1)]
+  
+end
+
+CommandControllerStringsErrorLevel = 1
