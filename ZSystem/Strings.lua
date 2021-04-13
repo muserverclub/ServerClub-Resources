@@ -2,183 +2,183 @@ Strings = function (aIndex,id)
   local strings = { 
       Controller_1 = {
         "Your account's access type does not allow you to use this command.",
-        "O tipo de acesso da sua conta não permite que você use este comando.",
+        "O tipo de acesso da sua conta nÃ£o permite que vocÃª use este comando.",
         "El tipo de acceso de su cuenta no le permite usar este comando."
       },
       Controller_2 = {
         "You can use the command again at %s.",
-        "Você pode usar o comando novamente em %s.",
+        "VocÃª pode usar o comando novamente em %s.",
         "Puede usar el comando nuevamente en %s."
       },
       Controller_3 = {
         "You have exceeded the number of times you can use this command daily.",
-        "Você excedeu o número de vezes que pode usar este comando diariamente.",
+        "VocÃª excedeu o nÃºmero de vezes que pode usar este comando diariamente.",
         "Ha excedido la cantidad de veces que puede usar este comando diariamente."
       },
       Controller_4 = {
         "You cannot use this command on this map.",
-        "Você não pode usar este comando neste mapa.",
+        "VocÃª nÃ£o pode usar este comando neste mapa.",
         "No puede usar este comando en este mapa."
       },
       Controller_5 = {
         "You can use the command on the following maps:",
-        "Você pode usar o comando nos seguintes mapas:",
+        "VocÃª pode usar o comando nos seguintes mapas:",
         "Puedes usar el comando en los siguientes mapas:"
       },
       Controller_6 = {
         "You cannot use this command now.",
-        "Você não pode usar este comando agora.",
+        "VocÃª nÃ£o pode usar este comando agora.",
         "No puedes usar este comando ahora."
       },
       Controller_7 = {
         "You must have between %d to %d level to use this command.",
-        "Você deve ter entre %d e %d para usar este comando..",
+        "VocÃª deve ter entre %d e %d para usar este comando..",
         "Debe tener entre %d y %d nivel para usar este comando."
       },
       Controller_8 = {
         "You must have between %d to %d reset to use this command.",
-        "Você deve ter entre %d e %d redefinição para usar este comando.",
+        "VocÃª deve ter entre %d e %d redefiniÃ§Ã£o para usar este comando.",
         "Debe tener entre %d y %d restablecer para usar este comando."
       },
       Controller_9 = {
         "You must have between %d to %d master reset to use this command.",
-        "Você deve ter entre %d e %d redefinição mestre para usar este comando.",
+        "VocÃª deve ter entre %d e %d redefiniÃ§Ã£o mestre para usar este comando.",
         "Debe tener entre %d y %d reinicio maestro para usar este comando."
       },
       Controller_10 = {
         "Your class does not allow you to use this command.",
-        "Sua classe não permite que você use este comando.",
+        "Sua classe nÃ£o permite que vocÃª use este comando.",
         "Su clase no le permite usar este comando."
       },
       Controller_11 = {
         "Your class level does not allow you to use this command.",
-        "Seu nível de classe não permite que você use este comando.",
+        "Seu nÃ­vel de classe nÃ£o permite que vocÃª use este comando.",
         "Su nivel de clase no le permite usar este comando."
       },
       Controller_12 = {
         "Your gens family does not allow you to use this command.",
-        "Sua família gens não permite que você use este comando.",
+        "Sua famÃ­lia gens nÃ£o permite que vocÃª use este comando.",
         "Su familia de gens no le permite usar este comando."
       },
       Controller_13 = {
         "Your PK / Hero level does not allow you to use this command.",
-        "Seu nível de PK / Herói não permite que você use este comando.",
+        "Seu nÃ­vel de PK / HerÃ³i nÃ£o permite que vocÃª use este comando.",
         "Tu nivel de PK / Hero no te permite usar este comando."
       },
       Controller_14 = {
         'You can only use this command from a safe place.',
-        'Você só pode usar este comando em um local seguro.',
+        'VocÃª sÃ³ pode usar este comando em um local seguro.',
         'Solo puede usar este comando desde un lugar seguro.'
       },
       Controller_15 = {
         "You need %d WCoinC to use the command.",
-        "Você precisa de %d WCoinC para usar o comando.",
+        "VocÃª precisa de %d WCoinC para usar o comando.",
         "Necesita %d WCoinC para usar el comando."
       },
       Controller_16 = {
         "You are not allowed to use this command",
-        "Você não tem permissão para usar esse comando",
+        "VocÃª nÃ£o tem permissÃ£o para usar esse comando",
         "No se le permite usar este comando"
       },
       Controller_17 = {
         "You need to be between master level %d and %d to use the command.",
-        "Você precisa estar no entre o master level %d e %d para usar o comando.",
+        "VocÃª precisa estar no entre o master level %d e %d para usar o comando.",
         "Necesitas estar entre el master level %d y %d para usar el comando."
       },
       Controller_18 = {
         "You need %d WCoinP to use the command.",
-        "Você precisa de %d WCoinP para usar o comando.",
+        "VocÃª precisa de %d WCoinP para usar o comando.",
         "Necesita %d WCoinP para usar el comando."
       },
       Controller_19 = {
         "You need %d GoblinPoint to use the command.",
-        "Você precisa de %d GoblinPoint para usar o comando.",
+        "VocÃª precisa de %d GoblinPoint para usar o comando.",
         "Necesita %d GoblinPoint para usar el comando."
       },
       Controller_20 = {
         "You need %d %s %s to use the command.",
-        "Você precisa de %d %s %s para usar o comando.",
+        "VocÃª precisa de %d %s %s para usar o comando.",
         "Necesita %d %s %s para usar el comando."
       },
       Controller_21 = {
         "You need %s to use the command.",
-        "Você precisa de %s para usar o comando.",
+        "VocÃª precisa de %s para usar o comando.",
         "Necesita %s para usar el comando."
       },
       Controller_22 = {
         "You need %d Zen to use the command.",
-        "Você precisa de %d Zen para usar o comando.",
+        "VocÃª precisa de %d Zen para usar o comando.",
         "Necesita %d Zen para usar el comando."
       },
       Controller_23 = {
         "You need %d Ruud to use the command.",
-        "Você precisa de %d Ruud para usar o comando.",
+        "VocÃª precisa de %d Ruud para usar o comando.",
         "Necesita %d Ruud para usar el comando."
       },
       Controller_24 = {
         'You can not use this command from a safe place.',
-        'Você não pode usar este comando em um local seguro.',
+        'VocÃª nÃ£o pode usar este comando em um local seguro.',
         'No puede usar este comando desde un lugar seguro.'
       },
       Controller_25 = {
         "You cannot use this command on this coordinate.",
-        "Você não pode usar este comando neste coordenada.",
+        "VocÃª nÃ£o pode usar este comando neste coordenada.",
         "No puede usar este comando en esta area."
       },
       Controller_26 = {
         "You cannot use this command on this coordinate.",
-        "Você não pode usar este comando neste coordenada.",
+        "VocÃª nÃ£o pode usar este comando neste coordenada.",
         "No puede usar este comando en esta area."
       },
       RealTime_1 = {
-        "Código inválido!",
-        "Código inválido!",
-        "Código inválido!"
+        "Invalid code!",
+        "CÃ³digo invÃ¡lido!",
+        "Codigo invalido!"
       },
       RealTime_2 = {
-        "Código atualizado!",
-        "Código atualizado!",
-        "Código atualizado!"
+        "Updated code!",
+        "CÃ³digo atualizado!",
+        "CÃ³digo actualizado!"
       },
       Reward_1 = {
-        "Items enviado para o seu inventário",
-        "Items enviado para o seu inventário",
-        "Items enviado para o seu inventário",
+        "Items sent to your inventoryo",
+        "Items enviado para o seu inventÃ¡rio",
+        "ArtÃ­culos enviados a su inventario",
       },
       Reward_2 = {
-        "%s foi enviado para o seu inventário",
-        "%s foi enviado para o seu inventário",
-        "%s foi enviado para o seu inventário",
+        "%s has been sent to your inventory",
+        "%s foi enviado para o seu inventÃ¡rio",
+        "%s ha sido enviado a tu inventario",
       },
       Reward_3 = {
         "%s Summoned",
         "%s Summonado",
-        "%s Summoned",
+        "%s Convocado",
       },
       Reward_4 = {
+        "Effect %s Received",
         "Efeito %s recebido",
-        "Efeito %s recebido",
-        "Efeito %s recebido",
+        "Efecto %s recebido",
       },
       Reward_5 = {
-        "Você recebeu %d WCoinC",
-        "Você recebeu %d WCoinC",
-        "Você recebeu %d WCoinC",
+        "You received %d WCoinC",
+        "VocÃª recebeu %d WCoinC",
+        "Usted recibiÃ³ %d WCoinC",
       },
       Reward_6 = {
-        "Você recebeu %d WCoinP",
-        "Você recebeu %d WCoinP",
-        "Você recebeu %d WCoinP",
+        "You received %d WCoinP",
+        "VocÃª recebeu %d WCoinP",
+        "Usted recibiÃ³ %d WCoinP",
       },
       Reward_7 = {
-        "Você recebeu %d GoblinPoint",
-        "Você recebeu %d GoblinPoint",
-        "Você recebeu %d GoblinPoint",
+        "You received %d GoblinPoint",
+        "VocÃª recebeu %d GoblinPoint",
+        "Usted recibiÃ³ %d GoblinPoint",
       },
       Reward_8 = {
-        "Libere espaço no seu inventário para receber o item",
-        "Libere espaço no seu inventário para receber o item",
-        "Libere espaço no seu inventário para receber o item",
+        "Free up space in your inventory to receive the item",
+        "Libere espaÃ§o no seu inventÃ¡rio para receber o item",
+        "Libera espacio en tu inventario para recibir el artÃ­culo",
       }
 
   }
