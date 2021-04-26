@@ -1,7 +1,7 @@
 Command.Authority = {"Admin1","Admin2","Admin3"}                                                      -- Coloque o nome dos personagem que poderão usar esse comando ( outros personagens que não tiver inserido aqui, não poderão usar )
 Command.BlockMaps = {0,1,2}                                                                           -- Números dos mapas em que o script não funciona ( Se não estiver nada inserido aqui, qualquer mapa irá funcionar o comando )
-Command.AllowMaps = {}                                                                                -- Números dos mapas em que o comando funciona ( Se não estiver nada inserido aqui, qualquer mapa irá funcionar o comando )
-Command.BlockCoord = {
+Command.AllowMaps = {0,1,2}                                                                           -- Números dos mapas em que o comando funciona ( Se não estiver nada inserido aqui, qualquer mapa irá funcionar o comando )
+Command.BlockCoord = {                                                                                -- Coordenadas em que o script nÃ£o funciona ( Se nÃ£o estiver nada inserido aqui, qualquer Coordenadas irÃ¡ funcionar o comando )
 	{
 		Map = 0,
 		MapXMin = 0,
@@ -9,8 +9,8 @@ Command.BlockCoord = {
 		MapXMax = 255,
 		MapYMax = 255
 	}
-}                                                                          -- Coordenadas em que o script nÃ£o funciona ( Se nÃ£o estiver nada inserido aqui, qualquer Coordenadas irÃ¡ funcionar o comando )
-Command.AllowCoord = {
+}
+Command.AllowCoord = {                                                                                -- Coordenadas dos mapas em que o comando funciona ( Se nÃ£o estiver nada inserido aqui, qualquer Coordenadas irÃ¡ funcionar o comando )
 	{
 		Map = 0,
 		MapXMin = 0,
@@ -18,7 +18,7 @@ Command.AllowCoord = {
 		MapXMax = 255,
 		MapYMax = 255
 	}
-}                                                                               -- Coordenadas dos mapas em que o comando funciona ( Se nÃ£o estiver nada inserido aqui, qualquer Coordenadas irÃ¡ funcionar o comando )
+}
 Command.BlockDays = {}                                                                                -- Dias da semana que o script não funcionará ( 1 = Domingo, 7 = Sábado)
 Command.BlockHours = {}                                                                               -- Horas do dia que o script não funcionará ( 0 a 23 horas)
 
@@ -36,6 +36,7 @@ Command.AllowAccountLevel = {0,1,2,3}                                           
 Command.AllowClass = {0,1,2,3,4,5,6,7,8}                                                              -- Classes que podem usar o comando
 Command.AllowQuest = {0,1,2,3}                                                                        -- Níveis que podem usar o comando
 Command.AllowGens = {0,1,2}                                                                           -- Famílias Gens permitidas
+Command.AllowGuild = {}                                                                               -- Guild permitidas, false > sem guild | {} > qualquer guild | {"guild1","guild2"} > guilds específicas
 Command.AllowPKLevel = {0,1,2,3,4,5,6,7}                                                              -- Níveis de Status PK/Hero que podem usar o comando
 
 --[[
@@ -85,10 +86,9 @@ Command.ReqItem = {
 }
 
 --[[
-  ReqItemEx = { Section = 0, ID = 0}, 
-  Section --> Item section
-  ID --> Item Id
-
+  Index --> (Item section*512+Item Id)
+  Title --> Texto para exibição
+  
   *** OPCIONAL ***
   MinLevel --> Item Min Level
   MaxLevel --> Item Max Level
@@ -107,19 +107,19 @@ Command.ReqItem = {
 Command.ReqItemEx = {
 	-- FREE
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
 	-- VIP 1
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
 	-- VIP 2
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
 	-- VIP 3
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   }
 }
 Command.QueryCharacter = {

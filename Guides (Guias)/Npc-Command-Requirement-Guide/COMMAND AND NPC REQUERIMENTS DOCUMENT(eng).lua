@@ -1,6 +1,7 @@
 Command.Authority = {"Admin1","Admin2","Admin3"}                                                      -- Enter the name of the characters that will be able to use this command (other characters that you have not entered here, will not be able to use)
 Command.BlockMaps = {0,1,2}                                                                           -- Map numbers on which the script does not work (If nothing is inserted here, any map will work on the command)
-Command.AllowMaps = {
+Command.AllowMaps = {0,1,2}                                                                           -- Map numbers on which the command works (If nothing is inserted here, any map will work on the command)
+Command.BlockCoord = {                                                                                -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
 	{
 		Map = 0,
 		MapXMin = 0,
@@ -8,8 +9,8 @@ Command.AllowMaps = {
 		MapXMax = 255,
 		MapYMax = 255
 	}
-}                                                                                -- Map numbers on which the command works (If nothing is inserted here, any map will work on the command)
-Command.BlockCoord = {
+}
+Command.AllowCoord = {                                                                                -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
 	{
 		Map = 0,
 		MapXMin = 0,
@@ -17,8 +18,7 @@ Command.BlockCoord = {
 		MapXMax = 255,
 		MapYMax = 255
 	}
-}                                                                          -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
-Command.AllowCoord = {}                                                                               -- Coordinates on which the command works (If nothing is inserted here, any map will work on the command)
+}
 Command.BlockDays = {}                                                                                -- Days of the week that the script will not work (1 = Sunday, 7 = Saturday)
 Command.BlockHours = {}                                                                               -- Hours of the day that the script will not work (0 to 23 hours)
 
@@ -36,6 +36,7 @@ Command.AllowAccountLevel = {0,1,2,3}                                           
 Command.AllowClass = {0,1,2,3,4,5,6,7,8}                                                              -- Classes that can use the command
 Command.AllowQuest = {0,1,2,3}                                                                        -- Levels that can use the command
 Command.AllowGens = {0,1,2}                                                                           -- Gens family allowed
+Command.AllowGuild = {}                                                                               -- Guild allowed, false > no guild | {} > any guild | {"guild1", "guild2"}> specific guilds
 Command.AllowPKLevel = {0,1,2,3,4,5,6,7}                                                              -- PK / Hero Status Levels that can use the X command
 
 --[[
@@ -81,9 +82,8 @@ Command.ReqItem = {
 }
 
 --[[
-  ReqItemEx = { Section = 0, ID = 0}, 
-  Section --> Item section
-  ID --> Item Id
+  Index --> (Item section*512+Item Id)
+  Title --> Display Text
 
   *** OPTIONAL ***
   MinLevel --> Item Min Level
@@ -101,17 +101,21 @@ Command.ReqItem = {
   
 ]]
 Command.ReqItemEx = {
+	-- FREE
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
+	-- VIP 1
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
+	-- VIP 2
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   },
+	-- VIP 3
   {
-    {Section = 0, ID = 0}
+      {Title = "Kriss", Index = (0*512+0)}
   }
 }
 Command.QueryCharacter = {
