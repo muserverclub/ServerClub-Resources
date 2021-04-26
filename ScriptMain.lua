@@ -10,7 +10,8 @@
 ]]
 SQLConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
 SQLAsyncConnect("MuOnline","","") -- DON´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
-Season = 6 -- SEASON NUMBER
+Season = 16 -- SEASON NUMBER
+MonsterDirectory = "../Data/Script/Data/Monster/Monster.txt" -- Monster.txt directory (IMPORTANT: must be the monster.txt of season 15 or higher)
 CacheLogDirectory = "C:/ScriptLogs/"
 require("ZSystem\\App") -- ZSystem
 
