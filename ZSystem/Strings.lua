@@ -130,55 +130,115 @@ Strings = function (aIndex,id)
         "Você não pode usar este comando neste coordenada.",
         "No puede usar este comando en esta area."
       },
+      Controller_27 = {
+        "Você não pode usar o comando enquanto estiver em uma guild",
+        "Você não pode usar o comando enquanto estiver em uma guild",
+        "Você não pode usar o comando enquanto estiver em uma guild"
+      },
+      Controller_28 = {
+        "Apenas membros de guild podem usar esse comando",
+        "Apenas membros de guild podem usar esse comando",
+        "Apenas membros de guild podem usar esse comando"
+      },
+      Controller_29 = {
+        "Sua guild não pode usar esse comando",
+        "Sua guild não pode usar esse comando",
+        "Sua guild não pode usar esse comando"
+      },      
+      Controller_30 = {
+        'You can only use this command from a not safe place.',
+        'Você só pode usar este comando em um local não seguro.',
+        'Solo puede usar este comando desde un lugar no seguro.'
+      },    
+      Controller_31 = {
+        'Close all windows to continue',
+        'Feche todas as janelas para continuar',
+        'Cierre todas las ventanas para continuar'
+      }, 
+      Controller_32 = {
+        '%d WCoinC has been debited from your account',
+        'Foi debitado %d WCoinC da sua conta',
+        '%d WCoinC ha sido debitado de su cuenta'
+      }, 
+      Controller_33 = {
+        '%d WCoinP has been debited from your account',
+        'Foi debitado %d WCoinP da sua conta',
+        '%d WCoinP ha sido debitado de su cuenta'
+      }, 
+      Controller_34 = {
+        '%d GoblinPoint has been debited from your account',
+        'Foi debitado %d GoblinPoint da sua conta',
+        '%d GoblinPoint ha sido debitado de su cuenta'
+      }, 
+      Controller_35 = {
+        '%d Ruud has been debited from your account',
+        'Foi debitado %d Ruud da sua conta',
+        '%d Ruud ha sido debitado de su cuenta'
+      }, 
+      Controller_36 = {
+        '%d Zen has been debited from your account',
+        'Foi debitado %d Zen da sua conta',
+        '%d Zen ha sido debitado de su cuenta'
+      }, 
+      Controller_37 = {
+        '%s has been removed from your inventory',
+        '%s foi removido do seu inventário',
+        '%s ha sido eliminado de tu inventario'
+      }, 
+      Controller_38 = {
+        '%d %s has been removed from your inventory',
+        '%d %s foi removido do seu inventário',
+        '%d %s ha sido eliminado de tu inventario'
+      }, 
       RealTime_1 = {
-        "Invalid code!",
         "Código inválido!",
-        "Codigo invalido!"
+        "Código inválido!",
+        "Código inválido!"
       },
       RealTime_2 = {
-        "Updated code!",
         "Código atualizado!",
-        "Código actualizado!"
+        "Código atualizado!",
+        "Código atualizado!"
       },
       Reward_1 = {
-        "Items sent to your inventoryo",
         "Items enviado para o seu inventário",
-        "Artículos enviados a su inventario",
+        "Items enviado para o seu inventário",
+        "Items enviado para o seu inventário",
       },
       Reward_2 = {
-        "%s has been sent to your inventory",
         "%s foi enviado para o seu inventário",
-        "%s ha sido enviado a tu inventario",
+        "%s foi enviado para o seu inventário",
+        "%s foi enviado para o seu inventário",
       },
       Reward_3 = {
         "%s Summoned",
         "%s Summonado",
-        "%s Convocado",
+        "%s Summoned",
       },
       Reward_4 = {
-        "Effect %s Received",
         "Efeito %s recebido",
-        "Efecto %s recebido",
+        "Efeito %s recebido",
+        "Efeito %s recebido",
       },
       Reward_5 = {
-        "You received %d WCoinC",
         "Você recebeu %d WCoinC",
-        "Usted recibió %d WCoinC",
+        "Você recebeu %d WCoinC",
+        "Você recebeu %d WCoinC",
       },
       Reward_6 = {
-        "You received %d WCoinP",
         "Você recebeu %d WCoinP",
-        "Usted recibió %d WCoinP",
+        "Você recebeu %d WCoinP",
+        "Você recebeu %d WCoinP",
       },
       Reward_7 = {
-        "You received %d GoblinPoint",
         "Você recebeu %d GoblinPoint",
-        "Usted recibió %d GoblinPoint",
+        "Você recebeu %d GoblinPoint",
+        "Você recebeu %d GoblinPoint",
       },
       Reward_8 = {
-        "Free up space in your inventory to receive the item",
         "Libere espaço no seu inventário para receber o item",
-        "Libera espacio en tu inventario para recibir el artículo",
+        "Libere espaço no seu inventário para receber o item",
+        "Libere espaço no seu inventário para receber o item",
       }
 
   }
