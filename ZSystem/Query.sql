@@ -38,10 +38,6 @@ Drop Table CharacterRealTime
 CREATE TABLE [dbo].[CharacterRealTime] (
 [AccountId] varchar(10) NOT NULL ,
 [Name] varchar(10) NOT NULL ,
-[Serial] varchar(100) NULL ,
-[IpAddress] varchar(15) NULL ,
-[Online] bit NOT NULL DEFAULT ((0)) ,
-[ServerName] varchar(100) NULL ,
 [PKLevel] int NOT NULL DEFAULT ((0)) ,
 [Level] int NOT NULL DEFAULT ((0)) ,
 [MasterLevel] int NOT NULL DEFAULT ((0)) ,
@@ -73,6 +69,7 @@ CREATE TABLE [dbo].[CharacterRealTime] (
 [AttackMapX] int NOT NULL DEFAULT ((0)) ,
 [AttackMapY] int NOT NULL DEFAULT ((0)),
 [Class] [int] NOT NULL DEFAULT (0), 
+[OfflineFlag] [int] NOT NULL DEFAULT (0), 
 )
 
 DROP Procedure [dbo].[G_CharacterRealTime] 
@@ -80,32 +77,33 @@ GO
 
 CREATE Procedure [dbo].[G_CharacterRealTime] 
 @AccountId varchar(10) ,
-@Name varchar(10) ,
-@Serial varchar(100) ,
-@IpAddress varchar(15) ,
-@Online bit ,
-@ServerName varchar(100) ,
-@PKLevel int ,
-@Level int ,
-@MasterLevel int ,
-@Reset int ,
-@MasterReset int ,
-@Life int ,
-@MaxLife int ,
-@Shield int ,
-@MaxShield int ,
-@Map int ,
-@MapX int ,
-@MapY int ,
-@Party varchar(100),
-@Strength int, 
-@Dexterity int, 
-@Vitality int, 
-@Energy int, 
-@Leadership int, 
-@Ruud int, 
-@Money int,
-@Class int 
+@Name varchar(10),
+@Serial varchar(100) = null,
+@IpAddress varchar(15) = null,
+@Online bit = null,
+@ServerName varchar(100) = null,
+@PKLevel int = null,
+@Level int = null,
+@MasterLevel int = null,
+@Reset int = null,
+@MasterReset int = null,
+@Life int = null,
+@MaxLife int = null,
+@Shield int = null,
+@MaxShield int = null,
+@Map int = null,
+@MapX int = null,
+@MapY int = null,
+@Party varchar(100)= null,
+@Strength int= null, 
+@Dexterity int= null, 
+@Vitality int= null, 
+@Energy int= null, 
+@Leadership int= null, 
+@Ruud int= null, 
+@Money int= null,
+@Class int = null,
+@OfflineFlag int = null
 AS
 BEGIN
 
@@ -142,35 +140,37 @@ BEGIN
 			,[Leadership] 
 			,[Ruud] 
 			,[Money]
-			,[Class] )
+			,[Class]
+			,[OfflineFLag] )
      VALUES
-           (@AccountId,
+            (@AccountId,
 			@Name,
-			@Serial,
-            @IpAddress,
-			@Online,
-			@ServerName,
-			@PKLevel,
-			@Level,
-			@MasterLevel,
-			@Reset,
-			@MasterReset,
-			@Life,
-			@MaxLife,
-			@Shield,
-			@MaxShield,
-			@Map,
-			@MapX,
-			@MapY,
-            @Party,
-			@Strength,
-			@Dexterity,
-			@Vitality,
-			@Energy,
-			@Leadership,
-			@Ruud,
-			@Money,
-			@Class)
+			COALESCE(@Serial,''),
+			COALESCE(@IpAddress,''),
+			COALESCE(@Online,0),
+			COALESCE(@ServerName,''),
+			COALESCE(@PKLevel,3),
+			COALESCE(@Level,0),
+			COALESCE(@MasterLevel,0),
+			COALESCE(@Reset,0),
+			COALESCE(@MasterReset,0),
+			COALESCE(@Life,0),
+			COALESCE(@MaxLife,0),
+			COALESCE(@Shield,0),
+			COALESCE(@MaxShield,0),
+			COALESCE(@Map,0),
+			COALESCE(@MapX,125),
+			COALESCE(@MapY,125),
+			COALESCE(@Party,''),
+			COALESCE(@Strength,0),
+			COALESCE(@Dexterity,0),
+			COALESCE(@Vitality,0),
+			COALESCE(@Energy,0),
+			COALESCE(@Leadership,0),
+			COALESCE(@Ruud,0),
+			COALESCE(@Money,0),
+			COALESCE(@Class,0),
+			COALESCE(@OfflineFlag,0))
 
 END
 ELSE
@@ -179,31 +179,32 @@ BEGIN
 	UPDATE [dbo].[CharacterRealTime]
         SET [AccountId] = @AccountId
             ,[Name] = @Name
-            ,[Serial] = @Serial
-            ,[IpAddress] = @IpAddress
-            ,[Online] = @Online
-            ,[ServerName] = @ServerName
-            ,[PKLevel] = @PKLevel
-            ,[Level] = @Level
-            ,[MasterLevel] = @MasterLevel
-            ,[Reset] = @Reset
-            ,[MasterReset] = @MasterReset
-            ,[Life] = @Life
-            ,[MaxLife] = @MaxLife
-            ,[Shield] = @Shield
-            ,[MaxShield] = @MaxShield
-            ,[Map] = @Map
-            ,[MapX] = @MapX
-            ,[MapY] = @MapY
-            ,[Party] = @Party
-			,[Strength] = @Strength
-			,[Dexterity] = @Dexterity
-			,[Vitality] = @Vitality
-			,[Energy] = @Energy
-			,[Leadership] = @Leadership
-			,[Ruud] = @Ruud
-			,[Money] = @Money
-			,[Class] = @Class
+            ,[Serial] = COALESCE(@Serial,Serial)
+            ,[IpAddress] = COALESCE(@IpAddress,IpAddress)
+            ,[Online] = COALESCE(@Online,Online)
+            ,[ServerName] = COALESCE(@ServerName,ServerName)
+            ,[PKLevel] = COALESCE(@PKLevel,PKLevel)
+            ,[Level] = COALESCE(@Level,Level)
+            ,[MasterLevel] = COALESCE(@MasterLevel,MasterLevel)
+            ,[Reset] = COALESCE(@Reset,Reset)
+            ,[MasterReset] = COALESCE(@MasterReset,MasterReset)
+            ,[Life] = COALESCE(@Life,Life)
+            ,[MaxLife] = COALESCE(@MaxLife,MaxLife)
+            ,[Shield] = COALESCE(@Shield,Shield)
+            ,[MaxShield] = COALESCE(@MaxShield,MaxShield)
+            ,[Map] = COALESCE(@Map,Map)
+            ,[MapX] = COALESCE(@MapX,MapX)
+            ,[MapY] = COALESCE(@MapY,MapY)
+            ,[Party] = COALESCE(@Party,Party)
+			,[Strength] = COALESCE(@Strength,Strength)
+			,[Dexterity] = COALESCE(@Dexterity,Dexterity)
+			,[Vitality] = COALESCE(@Vitality,Vitality)
+			,[Energy] = COALESCE(@Energy,Energy)
+			,[Leadership] = COALESCE(@Leadership,Leadership)
+			,[Ruud] = COALESCE(@Ruud,Ruud)
+			,[Money] = COALESCE(@Money,Money)
+			,[Class] = COALESCE(@Class,Class)
+			,[OfflineFlag] = COALESCE(@OfflineFlag,OfflineFlag)
         WHERE [Name] = @Name
 
 END
@@ -213,44 +214,4 @@ SET XACT_ABORT OFF
 
 END
 
-GO
 
-CREATE TABLE [dbo].[Greed_DashRanking](
-	[Name] [varchar](10) NOT NULL,
-	[Kills] [int] NOT NULL default(0),
-	[Death] [int] NOT NULL default(0),
-	[Timer] [int] NOT NULL default(0),
-	[Type] [varchar](10) NOT NULL
-) ON [PRIMARY]
-
-GO
-
-CREATE Procedure [dbo].[G_DashRanking] 
-@Name varchar(10),
-@Kills int,
-@Death int,
-@Timer int,
-@Type varchar(10)
-AS
-BEGIN
-
-SET NOCOUNT ON
-SET XACT_ABORT ON
-
-IF NOT EXISTS (SELECT 1 FROM Greed_DashRanking WHERE Name=@Name and [Type]=@Type)
-BEGIN
-
-	INSERT INTO Greed_DashRanking (Name,Kills,Death,Timer,[Type]) VALUES (@Name,@Kills,@Death,@Timer,@Type)
-
-END
-ELSE
-BEGIN
-
-	UPDATE Greed_DashRanking SET Kills=Kills+@Kills, Death=Death+@Death, Timer=@Timer WHERE Name=@Name and [Type]=@Type
-
-END
-
-SET NOCOUNT OFF
-SET XACT_ABORT OFF
-
-END

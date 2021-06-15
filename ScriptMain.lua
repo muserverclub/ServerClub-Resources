@@ -1,27 +1,37 @@
---[[
-  SCRIPT MAIN GUIDE BY MUSERVER.CLUB
-  MUST USE THIS SETTINGS FOR MUSERVER.CLUB SCRIPTS ( ZSystem IS REQUIRE)
-  ZSystem IS A PLUGIN WITH ALL X-TEAM NATIVE SCRIPTS FUNCTION, MANY EXTRA FUNCTIONS AND CORRECTIONS
-  ALL OTHER SCRIPTS WILL WORK (NEW VERSION 2020+ AND OLDER VERSION 2019-)
-  ZSystem AUTO CREATE A REQUIRE FOR ALL SCRIPTS ON "Muserver\\Data\\Script" FOLDER:
-  require("Folder\\App") AUTOMATIC // ALL OTHER SCRIPTS FORMATS (NAMES,FOLDERS) REQUIRE MANUAL REQUIRE ON SCRIPT MAIN
-  ****IMPORTANT****
-  SQLConnect and SQLAsyncConnect use ODBC to connect to SQL,  NOT SQL USER AND PASS! SO DONÂ´T CHANGE THE ODBC-NAME, ODBC-USER, ODBC-USER UNLESS YOU KNOW WHAT YOU ARE DOING!
-]]
-SQLConnect("MuOnline","","") -- DONÂ´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
-SQLAsyncConnect("MuOnline","","") -- DONÂ´T CHANGE! UNLESS YOU HAVE OTHER ODBC NAME!
-Season = 16 -- SEASON NUMBER
-MonsterDirectory = "../Data/Script/ZSystem/Data/Monster/Monster.txt" -- Monster.txt directory (IMPORTANT: must be the monster.txt of season 15 or higher)
-CacheLogDirectory = "C:/ScriptLogs"
-require("ZSystem\\App") -- ZSystem
+-- ODBC de conexão com o banco de dados
+-- Database Connection ODBC
+-- Conexión de base de datos ODBC
+Server_ODBC = "MuOnline"
 
---auto require
-for dir in io.popen([[dir "../Data/Script/" /b]]):lines() do
-	if string.find(dir, "%.") == nil and string.find(dir,'Ignore') == nil and dir ~= 'ZSystem' then
-		local f=io.open(string.format("../Data/Script/%s/App.lua",dir),"r")
-		if f~= nil then
-			io.close(f)
-			require(string.format("%s\\App", dir))
-		end
-	end
-end
+-- MuServer Season (0,2,4,6,8,10,12,13,14,15,16+)
+Season = 16
+
+-- Contas com privilégio para usar /reloadscript e /reloadconfig
+-- Accounts with privilege to use /reloadscript and /reloadconfig
+-- Cuentas con privilegio para usar /reloadscript y /reloadconfig
+ReloadAuthority = {"admin1","admin2"}
+ReloadScriptCode = 1001
+ReloadConfigCode = 1002
+
+-- NÃO ALTERE
+-- DON'T CHANGE
+-- NO CAMBIES
+require("ZSystem\\App")
+
+--[[
+                                                            !!!IMPORTANTE!!!
+
+      Não é necessario adicionar require de scripts. Basta renomear o arquivo principal do seu script para "App.lua" e coloca-lo dentro de uma pasta com o nome que você desejar.
+      Para que uma pasta não tenha seu script lido, renomeie-a colocando "Ignore" no inicio, dessa forma o script não será carregado
+
+                                                            !!!IMPORTANT!!!
+
+      It is not necessary to add require scripts. Just rename your script's main file to "App.lua" and place it inside a folder with whatever name you want.
+      So that a folder does not have its script read, rename it putting "Ignore" at the beginning, this way the script will not be loaded
+
+                                                            !!!IMPORTANTE!!!
+
+      No es necesario agregar scripts obligatorios. Simplemente cambie el nombre del archivo principal de su script a "App.lua" y colóquelo dentro de una carpeta con el nombre que desee.
+      Para que una carpeta no tenga su script leído, cámbiele el nombre poniendo "Ignorar" al principio, de esta forma no se cargará el script
+
+]]
