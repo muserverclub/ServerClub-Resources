@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "pm2 delete index & pm2 start index.js --exp-backoff-restart-delay=10000 & pm2 monit"
   },
   "author": "Anderson (Greed) <muserver.club>",
   "license": "ISC",

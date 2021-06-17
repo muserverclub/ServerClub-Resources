@@ -5,6 +5,10 @@ GO
 Drop Table CharacterRealTime
 CREATE TABLE [dbo].[CharacterRealTime] (
 [AccountId] varchar(10) NOT NULL ,
+[Serial] varchar(100) NULL,
+[IpAddress] varchar(15) NULL,
+[Online] bit default (0) not null,
+[ServerName] varchar(100) null,
 [Name] varchar(10) NOT NULL ,
 [PKLevel] int NOT NULL DEFAULT ((0)) ,
 [Level] int NOT NULL DEFAULT ((0)) ,
