@@ -32,6 +32,7 @@ Command.CustomFunction = function(aIndex,Data)                                  
 
 end
 
+Command.CheckInterface	=	true																	  -- true > Check if you have any open windows and tell them to close | false > does not check
 Command.AllowAccountLevel = {0,1,2,3}                                                                 -- Account levels you can use the command
 Command.AllowClass = {0,1,2,3,4,5,6,7,8}                                                              -- Classes that can use the command
 Command.AllowQuest = {0,1,2,3}                                                                        -- Levels that can use the command

@@ -31,7 +31,7 @@ Command.CustomFunction = function(aIndex,Data)                                  
   --return 0          -- A verificação apresentou erro, e a função não irá prosseguir
 
 end
-
+Command.CheckInterface	=	true																	  -- true > Verifica se tem alguma janela aberta e manda fechar | false > não verifica
 Command.AllowAccountLevel = {0,1,2,3}                                                                 -- Níveis de conta que pode usar o comando
 Command.AllowClass = {0,1,2,3,4,5,6,7,8}                                                              -- Classes que podem usar o comando
 Command.AllowQuest = {0,1,2,3}                                                                        -- Níveis que podem usar o comando
