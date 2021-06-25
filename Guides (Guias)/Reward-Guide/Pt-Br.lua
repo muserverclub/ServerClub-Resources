@@ -2,6 +2,7 @@
 
     Guia do Systema de Rewards:     
     Random = 0,
+	Rate = 100,
     SpecialEventBag = {},
     RandomSpecialEventBag = {},
     Item = {},
@@ -35,7 +36,7 @@
 
 RewardGuide = {
 
-
+	Rate = 100,					-- Chance de drop da eventbag ( 0 a 100 ), se não inserir, o drop sempre será realizado
     Random = 0, 				-- 0 = Recebe todos os prêmios disponiveis | Maior que 0 = entrega apenas 1 dos prêmios aleatoriamente vezes o numero inserido aqui ( ex: Random = 3, recebe 3 premios aleatorios)
     SpecialEventBag = {}, 		-- Numero do SpecialEventBag no EventBagManager.txt, pode ser inserido vários seguindo o modelo {1,2,3,4,5}, deixe vazio para não utilizar
     RandomSpecialEventBag = {}, -- Mesma coisa que o anterior, mas, só será entregue um bag aleatorio que vc inserir. (ex: no anterior se tiver {1,2,3}, vc vai receber as 3 bags. Nesse, será sorteado apenas um dos 3 pra ser premiado )

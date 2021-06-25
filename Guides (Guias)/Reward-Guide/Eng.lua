@@ -1,6 +1,7 @@
 --[[
 
     Guide for Script REWARD SYSTEM: 
+	Rate = 100,
     Random = 0,
     SpecialEventBag = {},
     RandomSpecialEventBag = {},
@@ -39,7 +40,7 @@
 
 RewardGuide = {
 
-
+	Rate = 100,					-- Chance of eventbag drop (0 to 100), if not entered, the drop will always be performed
     Random = 0, 				-- 0 = Player will receive all reward bellow | More then 0 = Player will receive 1 item randomly x times ( ex: Random = 3, player will receive 3 random rewards)
     SpecialEventBag = {}, 		-- Number off SpecialEventBag on EventBagManager.txt, can add more then 1 like this: {1,2,3,4,5}, leave empty for not use
     RandomSpecialEventBag = {}, -- Same thing of previous config, but only will reward with ONE bag. (ex: if SpecialEventBag =  {1,2,3}, player will receive 3 bags. On this setting, just one. )
