@@ -124,28 +124,28 @@ Command.QueryCharacter = {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
       "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'",
-      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
+      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset",1}
     }
   },
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
       "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'",
-      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
+      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset",1}
     }
   },
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
       "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'",
-      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
+      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset",1}
     }
   },
   {
     {
       "SELECT 1 FROM Character WHERE Name='%s' and ResetCount>'0'",
       "UPDATE Character SET ResetCount=ResetCount-1 WHERE Name='%s'",
-      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset"}
+      {"You need to have 1 Reset","Você precisa ter 1 Reset","Necesita tener 1 Reset",1}
     }
   }
 }
@@ -154,28 +154,28 @@ Command.QueryAccount = {
     {
       "SELECT 1 FROM CashShopData WHERE AccountId='%s' and GoblinPoint > 0",
       "UPDATE CashShopData SET GoblinPoint=GoblinPoint-1 WHERE AccountId='%s'",
-      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint"}
+      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint",1}
     }
   },
   {
     {
       "SELECT 1 FROM CashShopData WHERE AccountId='%s' and GoblinPoint > 0",
       "UPDATE CashShopData SET GoblinPoint=GoblinPoint-1 WHERE AccountId='%s'",
-      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint"}
+      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint",1}
     }
   },
   {
     {
       "SELECT 1 FROM CashShopData WHERE AccountId='%s' and GoblinPoint > 0",
       "UPDATE CashShopData SET GoblinPoint=GoblinPoint-1 WHERE AccountId='%s'",
-      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint"}
+      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint",1}
     }
   },
   {
     {
       "SELECT 1 FROM CashShopData WHERE AccountId='%s' and GoblinPoint > 0",
       "UPDATE CashShopData SET GoblinPoint=GoblinPoint-1 WHERE AccountId='%s'",
-      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint"}
+      {"You need to have 1 GoblinPoint","Você precisa ter 1 GoblinPoint","Necesita tener 1 GoblinPoint",1}
     }
   }
 }
